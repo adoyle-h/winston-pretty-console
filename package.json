@@ -1,0 +1,48 @@
+{
+  "name": "winston-pretty-console",
+  "version": "0.1.0",
+  "description": "A winston transport based on sprintf-js, cli-color, pretty-error for pretty console output",
+  "main": "index.js",
+  "keywords": [
+    "winston",
+    "console",
+    "transport"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "engines": {
+    "node": ">=0.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adoyle-h/winston-pretty-console.git"
+  },
+  "author": "ADoyle <adoyle.h@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/adoyle-h/winston-pretty-console/issues"
+  },
+  "homepage": "https://github.com/adoyle-h/winston-pretty-console#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "dependencies": {
+    "cli-color": "^1.1.0",
+    "is-plain-object": "^2.0.1",
+    "object.defaults": "^0.3.0",
+    "object.omit": "^2.0.0",
+    "pretty-error": "^2.0.0",
+    "sprintf-js": "^1.0.3",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^2.2.0",
+    "eslint-config-adoyle-style": "^0.2.0"
+  }
+}
