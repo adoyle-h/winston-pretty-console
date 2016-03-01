@@ -1,8 +1,6 @@
 'use strict';
 
 var winston = require('winston');
-var vsprintf = require('sprintf-js').vsprintf;
-var sprintf = require('sprintf-js').sprintf;
 var utilColors = require('cli-color');
 var nodeUtil = require('util');
 var util = require('./util');
@@ -11,6 +9,7 @@ var createPE = require('./pe').createPE;
 var Transport = winston.Transport;
 
 /**
+ * @method Console
  * @param  {Object}  opts
  * @param  {Object}  [opts.level='info']
  * @param  {Object}  [opts.colorize=true]
@@ -22,7 +21,6 @@ var Transport = winston.Transport;
  * @param  {String}  opts.pe.projectDir  The root path of this project
  * @param  {String}  [opts.pe.themeColor='red']  Optional value: 'red', 'green', 'yellow', 'blue', 'magenta', 'cyan', 'white'
  * @param  {Boolean}  [opts.pe.colorize=true]  whether output colorfully in terminal
- * @method Console
  */
 function Console(opts) {
     var self = this;
@@ -82,7 +80,7 @@ Console.prototype.log = function(level, msg, meta, callback) {
     if (opts.timestamp) {
         format = '[%s] ' + format;
         d = new Date();
-        localeTimeString = sprintf(
+        localeTimeString = nodeUtil.format(
             '%d-%02d-%02d %02d:%02d:%02d.%03d',
             d.getFullYear(), d.getMonth() + 1, d.getDate(),
             d.getHours(), d.getMinutes(), d.getSeconds(), d.getMilliseconds()
@@ -94,7 +92,8 @@ Console.prototype.log = function(level, msg, meta, callback) {
         format = utilColors[opts.colors[level]](format);
     }
 
-    output = vsprintf(format, args);
+    args.unshift(format);
+    output = nodeUtil.nodeUtil.apply(nodeUtil, args);
 
     var levels = opts.levels;
     if (levels[level] <= levels[opts.stderrLevel]) {

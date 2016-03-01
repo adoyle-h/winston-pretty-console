@@ -7,7 +7,7 @@
 [![Code Climate][Code Climate Image]][Code Climate Link]
 [![Test Coverage][Test Coverage Image]][Test Coverage Link]
 
-A [winston][] transport based on sprintf-js, cli-color, pretty-error for pretty console output
+A [winston][] transport based on cli-color, pretty-error for pretty console output
 
 
 ## TOC
