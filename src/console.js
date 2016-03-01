@@ -81,9 +81,14 @@ Console.prototype.log = function(level, msg, meta, callback) {
         format = '[%s] ' + format;
         d = new Date();
         localeTimeString = nodeUtil.format(
-            '%d-%02d-%02d %02d:%02d:%02d.%03d',
-            d.getFullYear(), d.getMonth() + 1, d.getDate(),
-            d.getHours(), d.getMinutes(), d.getSeconds(), d.getMilliseconds()
+            '%d-%d-%d %d:%d:%d.%d',
+            d.getFullYear(),
+            util.padStart(d.getMonth() + 1, 2),
+            util.padStart(d.getDate(), 2),
+            util.padStart(d.getHours(), 2),
+            util.padStart(d.getMinutes(), 2),
+            util.padStart(d.getSeconds(), 2),
+            util.padStart(d.getMilliseconds(), 3)
         );
         args.unshift(localeTimeString);
     }
@@ -93,7 +98,7 @@ Console.prototype.log = function(level, msg, meta, callback) {
     }
 
     args.unshift(format);
-    output = nodeUtil.nodeUtil.apply(nodeUtil, args);
+    output = nodeUtil.format.apply(nodeUtil, args);
 
     var levels = opts.levels;
     if (levels[level] <= levels[opts.stderrLevel]) {
