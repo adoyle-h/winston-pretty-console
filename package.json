@@ -1,6 +1,6 @@
 {
   "name": "winston-pretty-console",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A winston transport based on cli-color, pretty-error for pretty console output",
   "main": "index.js",
   "keywords": [
