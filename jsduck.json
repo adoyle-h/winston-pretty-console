@@ -1,0 +1,10 @@
+{
+    "--title": "Winston-pretty-console API doc",
+    "--footer": "Copyright (c) 2016 ADoyle <adoyle.h@gmail.com>. Licensed under the Apache License, Version 2.0.",
+    "--no-source": true,
+    "--": [
+        "src/console.js",
+        "src/pe.js"
+    ],
+    "--output": "./doc/API"
+}
