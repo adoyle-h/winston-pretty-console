@@ -80,7 +80,7 @@ See the [NOTICE][] file distributed with this work for additional information re
 
 [winston]: https://github.com/winstonjs/winston
 
-<!-- links -->
+<!-- Badges links -->
 
 [Node Version Image]: https://img.shields.io/node/v/winston-pretty-console.svg
 [Npm Package Version Image]: https://img.shields.io/npm/v/winston-pretty-console.svg

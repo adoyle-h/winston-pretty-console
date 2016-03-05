@@ -1,7 +1,7 @@
 {
   "name": "winston-pretty-console",
   "version": "0.1.0",
-  "description": "A winston transport based on sprintf-js, cli-color, pretty-error for pretty console output",
+  "description": "A winston transport based on cli-color, pretty-error for pretty console output",
   "main": "index.js",
   "keywords": [
     "winston",
@@ -38,10 +38,26 @@
     "object.defaults": "^0.3.0",
     "object.omit": "^2.0.0",
     "pretty-error": "^2.0.0",
-    "winston": "^2.2.0"
+    "winston": "*"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "config-sp": "^0.1.1",
+    "del": "^2.2.0",
     "eslint": "^2.2.0",
-    "eslint-config-adoyle-style": "^0.2.0"
+    "eslint-config-adoyle-style": "^0.2.0",
+    "gulp-bump": "^1.0.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-conventional-changelog": "^1.1.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-license": "^1.0.0",
+    "mocha": "^2.4.5",
+    "run-sequence": "^1.1.5",
+    "should": "^8.2.2",
+    "walkdir": "0.0.11"
+  },
+  "peerDependencies": {
+    "winston": "*"
   }
 }
