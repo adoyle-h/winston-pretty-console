@@ -33,11 +33,11 @@
     }
   },
   "dependencies": {
-    "cli-color": "^1.1.0",
+    "cli-color": "^2.0.1",
     "is-plain-object": "^2.0.1",
     "object.defaults": "^0.3.0",
     "object.omit": "^2.0.0",
-    "pretty-error": "^2.0.0",
+    "pretty-error": "^4.0.0",
     "winston": "*"
   },
   "devDependencies": {
